@@ -12,20 +12,24 @@ export class BlogComponent implements OnInit {
   constructor(private blogService: BlogService) { }
 
   posts: Post[];
-  posts2: Post[] = [
-    {message: "hello", datets: "date 1"},
-    {message: "hello2", datets: "date 2"},
-  ];
   selectedPost: Post;
+  page: number;
+  pageSize: number;
+  numPosts: number;
 
-  selectPost(sPost: Post): void {
-    this.selectedPost = sPost;
-  }
 
   getPosts(): void {
     this.posts = this.blogService.getPosts();
+    this.numPosts = this.blogService.getNumPosts();
   }
+
+  selectPost(post: Post): void {
+    this.selectedPost = post;
+  }
+
   ngOnInit() {
+    this.pageSize = 8;
+    this.page = 1;
     this.getPosts();
   }
 

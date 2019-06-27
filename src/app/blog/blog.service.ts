@@ -11,5 +11,8 @@ export class BlogService {
   getPosts(): Post[] {
     return Posts;
   }
+  getNumPosts(): number {
+    return Posts.length;
+  }
 }
 
