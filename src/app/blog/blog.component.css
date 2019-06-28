@@ -1,6 +1,6 @@
 .selected {
     color: lightcoral;
-    background-color: white;
+    background-color: black;
 
 }
 
@@ -52,4 +52,24 @@ li {
     color: white ! important;
     border-color: #333 !important;
 }
+
+:host ::ng-deep .pagination .page-item .page-link:focus {
+   
+    box-shadow: none !important;
+   
+}
+
+:host ::ng-deep .pagination .page-item .page-link:hover {
+
+    background-color: lightcoral !important;
+    border-color: lightcoral !important;
+
+}
+
+:host ::ng-deep .pagination .page-item.active .page-link:hover {
+
+    background-color: #333 !important;
+    border-color: #333 !important;
+}
+
 

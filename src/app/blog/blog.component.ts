@@ -28,7 +28,7 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pageSize = 8;
+    this.pageSize = 4;
     this.page = 1;
     this.getPosts();
   }
