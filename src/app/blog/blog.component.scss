@@ -1,0 +1,74 @@
+$defaultColor: rgb(13, 156, 61);
+
+.selected {
+    background-color: rgb(141, 155, 143);
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 40px;
+}
+
+.title {
+    background-color: $defaultColor;
+    color: white;
+    padding: 10px;
+    display: block;
+    font-style: oblique;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.datets {
+    font: italic;
+    font-size: 70%;
+}
+
+li {
+    font-style: italic;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    float: left;
+    clear: left;
+    border-radius: 4px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+:host ::ng-deep  .pagination {
+    padding: 20px 0 0 40px;
+    clear: left;
+
+    .page-link {
+        background-color: white !important;
+        color: #333 ! important;
+        border-radius: 0 !important;
+    }
+    .page-item.active .page-link {
+        background-color: #333 !important;
+        color: white ! important;
+        border-color: #333 !important;
+    }
+
+    .page-item .page-link:focus {
+   
+        box-shadow: none !important;
+       
+    }
+    .page-item .page-link:hover {
+
+        background-color: $defaultColor !important;
+        border-color: $defaultColor !important;
+    
+    }
+    .page-item.active .page-link:hover {
+
+        background-color: #333 !important;
+        border-color: #333 !important;
+    }
+    
+
+}
