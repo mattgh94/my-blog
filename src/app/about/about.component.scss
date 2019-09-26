@@ -1,11 +1,12 @@
+$defaultColor: rgb(13, 156, 61);
+
 p {
     font-style: italic;
     color: white;
-    background-color: lightcoral;
+    background-color: $defaultColor;
     padding: 10px;
-    margin: 20px;
+    margin: 20px 0 0 20px;
     float: left;
     clear: left;
-    margin: 20px 0 0 20px;
 }
 
