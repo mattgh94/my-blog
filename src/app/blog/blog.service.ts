@@ -3,6 +3,7 @@ import { Post } from './post';
 import { Posts } from './mock-posts';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class BlogService {
     return this.http.get(this.postsUrl + 'numPosts/')
   }
   
-  private postsUrl = 'api/blog/';
+  private postsUrl = environment.expressUrl + '/blog/';
 
 }
 

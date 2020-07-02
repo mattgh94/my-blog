@@ -33,7 +33,7 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pageSize = 5;
+    this.pageSize = 3;
     this.page = 1;
     this.getPosts();
   }
