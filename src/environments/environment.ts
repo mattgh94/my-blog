@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  expressUrl: 'http://localhost:3000',
+  spotifyAccount: 'https://open.spotify.com/user/ow12e0xxsosft7keys9rolg97'
 };
 
 /*

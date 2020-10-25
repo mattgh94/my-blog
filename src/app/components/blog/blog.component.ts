@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from './post';
 import { BlogService } from './blog.service';
+import { Posts } from './mock-posts';
 
 @Component({
   selector: 'app-blog',
@@ -19,8 +20,12 @@ export class BlogComponent implements OnInit {
 
 
   getPosts(): void {
-    this.posts = this.blogService.getPosts();
-    this.numPosts = this.blogService.getNumPosts();
+    this.blogService.getPosts().subscribe((data: Post[]) => 
+      this.posts = data
+    );
+    this.blogService.getNumPosts().subscribe((numPost: number) => 
+      this.numPosts = numPost
+    );
   }
 
   selectPost(post: Post): void {
@@ -28,7 +33,7 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.pageSize = 4;
+    this.pageSize = 3;
     this.page = 1;
     this.getPosts();
   }
