@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { externalLinks } from 'src/app/shared/constants/external-links';
 
 
 interface Alert {
@@ -27,7 +27,7 @@ const ALERTS: Alert[] = [{
 @Component({
   selector: 'app-music',
   templateUrl: './music.component.html',
-  styleUrls: ['./music.component.css']
+  styleUrls: ['./music.component.scss']
 })
 export class MusicComponent implements OnInit {
 
@@ -49,6 +49,6 @@ export class MusicComponent implements OnInit {
     this.alerts = Array.from(ALERTS);
   }
 
-  private spotifyLink = environment.spotifyAccount;
+  private spotifyLink = externalLinks.spotifyUrl;
 
 }
