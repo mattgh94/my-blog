@@ -1,6 +1,6 @@
 # MyBlog
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.  Includes a blog which integrates firebase storage.
 
 ## Development server
 
