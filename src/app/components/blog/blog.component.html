@@ -1,6 +1,31 @@
+
+
+
+<form [hidden]="hideForm" [formGroup]="this.blogService.form">
+  <label for="fname">Title</label>
+  <input placeholder="Post Title" 
+         formControlName="title" 
+         type="text" 
+         class="input-field col s12">
+  <label for="lname">Message</label>
+  <input placeholder="Post Message" 
+        formControlName="message" 
+        type="text" 
+        class="input-field col s12">
+  <button type="submit"
+        class="waves-effect waves-light btn col s12" 
+        (click)="onSubmit()">
+   Submit
+  </button>
+</form>
+
+<button type="toggle" (click)="toggleForm()">Add Blog Post</button>
+
+<br>
+<b>Page no: {{pagination_clicked_count+1}}</b>
+
 <ul>
-    <li *ngFor = "let post of posts 
-    | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize" 
+    <li *ngFor = "let post of posts" 
     [class.selected] = "post === selectedPost" (click) = 'selectPost(post)'>
       <span class="title">
         {{ post.title }}
@@ -13,9 +38,9 @@
     </li>
 </ul>
 
+<div class="pagination">
+  <button (click)="prevPage()"
+      [disabled]="disable_prev || !(pagination_clicked_count>0)">Previous</button>
+  <button (click)="nextPage()" [disabled]="disable_next">Next</button>
+</div>
 
-<ngb-pagination
-  [collectionSize]="numPosts"
-  [(page)]="page"
-  [pageSize]="pageSize">
-</ngb-pagination>

@@ -16,10 +16,6 @@ const ALERTS: Alert[] = [{
   message: 'This is an info alert',
 },
 {
-  type: ' warning',
-  message: 'This is a warning alert',
-},
-{
   type: 'danger',
   message: 'This is a danger alert',
 }];
